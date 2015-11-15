@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{D38046B0-574A-4ABA-966C-9EBC35350AD3}</ProjectGuid>
+    <ProjectGuid>{4C87DC5C-B33B-47D5-B199-EFC20547AA66}</ProjectGuid>
     <OutputType>winmdobj</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RPiDemo</RootNamespace>
-    <AssemblyName>RPiDemo</AssemblyName>
+    <RootNamespace>HeadlessAdapterApp</RootNamespace>
+    <AssemblyName>HeadlessAdapterApp</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
@@ -18,7 +18,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <AllowCrossPlatformRetargeting>false</AllowCrossPlatformRetargeting>
-    <PackageCertificateKeyFile>RPiDemo_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>HeadlessAdapterApp_TemporaryKey.pfx</PackageCertificateKeyFile>
     <AppxPackage>true</AppxPackage>
     <ContainsStartupTask>true</ContainsStartupTask>
   </PropertyGroup>
@@ -92,10 +92,6 @@
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <None Include="project.json" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="StartupTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -103,10 +99,10 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="RPiDemo_TemporaryKey.pfx" />
+    <None Include="HeadlessAdapterApp_TemporaryKey.pfx" />
+    <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
@@ -116,25 +112,30 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="WindowsIoT, Version=10.0.10240.0">
-      <Name>Windows IoT Extensions for the UWP</Name>
-    </SDKReference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\AdapterLib\AdapterLib.csproj">
       <Project>{5254f40c-cd4c-48f9-9c55-8040f071f1b4}</Project>
       <Name>AdapterLib</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\BridgeRT\BridgeRT.vcxproj">
       <Project>{2783a617-8e1d-40d1-9684-dfaeb8dd5406}</Project>
       <Name>BridgeRT</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UniversalMediaEngine\UniversalMediaEngine.vcxproj">
+      <Project>{81d46002-ec95-4423-bf6e-dbe82ccd55ca}</Project>
+      <Name>UniversalMediaEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="WindowsIoT, Version=10.0.10240.0">
+      <Name>Windows IoT Extensions for the UWP</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

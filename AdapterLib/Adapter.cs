@@ -16,9 +16,20 @@ namespace AdapterLib
 
     public delegate void AllJoynSetEventHandler(object sender, AllJoynData e);
     public delegate void AllJoynGetEventHandler(object sender, AllJoynAttributeData e);
+    public delegate void AllJoynMethodEventHandler(object sender, AllJoynMethodData e);
 
 
+    public sealed class AllJoynMethodData
+    {
+        public IAdapterMethod Method { get; private set; }
+        public IAdapterDevice AdapterDevice { get; private set; }
 
+        public AllJoynMethodData(IAdapterMethod method, IAdapterDevice adapterDevice)
+        {
+            this.Method = method;
+            this.AdapterDevice = adapterDevice;
+        }
+    }
 
     public sealed class AllJoynData
     {
@@ -48,6 +59,7 @@ namespace AdapterLib
 
         public event AllJoynSetEventHandler AllJoynSet;
         public event AllJoynGetEventHandler AllJoynGet;
+        public event AllJoynMethodEventHandler AllJoynMethod;
 
 
         private const uint ERROR_SUCCESS = 0;
@@ -152,6 +164,7 @@ namespace AdapterLib
             myDevice.Methods.Add(new AdapterMethod("left", "Turn left", 0));
             myDevice.Methods.Add(new AdapterMethod("right", "Turn right", 0));
             myDevice.Methods.Add(new AdapterMethod("backward", "Backwards", 0));
+            myDevice.Methods.Add(new AdapterMethod("joke", "Tell me a joke", 0));
 
 
             AdapterProperty lightProperty = new AdapterProperty("Light", "");
@@ -161,7 +174,7 @@ namespace AdapterLib
 
             AdapterProperty speechProperty = new AdapterProperty("Speech", "");
             speechProperty.Attributes.Add(NewAttribute("Volume", 4, E_ACCESS_TYPE.ACCESS_READWRITE));
-            speechProperty.Attributes.Add(NewAttribute("Message", "Hello Alljoyn", E_ACCESS_TYPE.ACCESS_READWRITE));
+            speechProperty.Attributes.Add(NewAttribute("Message", "Tell me a joke", E_ACCESS_TYPE.ACCESS_READWRITE));
             myDevice.Properties.Add(speechProperty);
 
 
@@ -222,6 +235,16 @@ namespace AdapterLib
                 AllJoynSet?.Invoke(this, new AllJoynData(r.Value));
                 return ERROR_SUCCESS;
             }
+        }
+
+        public uint CallMethod(IAdapterMethod Method, out IAdapterIoRequest RequestPtr)
+        {
+            RequestPtr = null;
+
+
+            AllJoynMethod?.Invoke(this, new AllJoynMethodData(Method, devices[0]));
+
+            return ERROR_SUCCESS;
         }
 
 
@@ -285,14 +308,7 @@ namespace AdapterLib
         }
 
 
-        public uint CallMethod(
-            IAdapterMethod Method,
-            out IAdapterIoRequest RequestPtr)
-        {
-            RequestPtr = null;
 
-            return ERROR_SUCCESS;
-        }
 
         public uint RegisterSignalListener(
             IAdapterSignal Signal,

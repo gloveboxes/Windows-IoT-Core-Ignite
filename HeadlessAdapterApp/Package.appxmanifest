@@ -8,15 +8,15 @@
   IgnorableNamespaces="uap mp iot">
 
   <Identity
-    Name="RPiDemo-uwp"
-    Publisher="CN=dglov"
+    Name="TestAJHeadlessAdapterApp"
+    Publisher="CN=default"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="665f72e4-5574-4a21-b474-eb2430b4bf04" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="839301a3-cce5-4edb-b025-89671503e49e" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>RPiDemo</DisplayName>
-    <PublisherDisplayName>dglov</PublisherDisplayName>
+    <DisplayName>TestAJHeadlessAdapterApp</DisplayName>
+    <PublisherDisplayName>default</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -29,19 +29,19 @@
   </Resources>
 
   <Applications>
-    <Application Id="App">
+    <Application Id="TestAJHeadlessAdapterApp">
       <uap:VisualElements
-        DisplayName="RPiDemo"
+        DisplayName="TestAJHeadlessAdapterApp"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="RPiDemo"
-        BackgroundColor="transparent"
+        Description="TestAJHeadlessAdapterApp"
+        BackgroundColor="#464646"
         AppListEntry="none">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
       <Extensions>
-        <Extension Category="windows.backgroundTasks" EntryPoint="RPiDemo.StartupTask">
+        <Extension Category="windows.backgroundTasks" EntryPoint="HeadlessAdapterApp.StartupTask">
           <BackgroundTasks>
             <iot:Task Type="startup" />
           </BackgroundTasks>
@@ -51,6 +51,6 @@
   </Applications>
 
   <Capabilities>
-    <Capability Name="internetClient" />
+    <Capability Name="allJoyn" />
   </Capabilities>
 </Package>
