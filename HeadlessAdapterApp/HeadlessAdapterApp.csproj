@@ -95,6 +95,7 @@
     <Compile Include="AllJoyn.cs" />
     <Compile Include="Banner.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="Speech.cs" />
     <Compile Include="StartupTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

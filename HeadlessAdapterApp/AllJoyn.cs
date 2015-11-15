@@ -69,7 +69,6 @@ namespace HeadlessAdapterApp
                 default:
                     break;
             }
-
         }
     }
 }

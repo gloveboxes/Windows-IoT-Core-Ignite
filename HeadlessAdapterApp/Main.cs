@@ -7,26 +7,17 @@ using Windows.Media.SpeechSynthesis;
 
 namespace HeadlessAdapterApp
 {
-    class Main : Banner
+    class Main : Speech
     {
-        //Speech Synth
-        private MediaEngine mediaEngine = new MediaEngine();
-        SpeechSynthesizer synth;
-
-
-
-        public async Task<bool> Initialise()
-        {
-            synth = new SpeechSynthesizer();
-            var result = await mediaEngine.InitializeAsync();
-
-
+        public async void Initialise()
+        { 
+            await InitSpeech();
             InitAllJoyn();
-            InitBanner();
+
+            await InitBanner();  
+      
 
             adapter.AllJoynMethod += Adapter_AllJoynMethod;
-
-            return true;
         }
 
         public override void Adapter_AllJoynMethod(object sender, AllJoynMethodData e)
@@ -35,8 +26,8 @@ namespace HeadlessAdapterApp
             {
 
                 case "joke":
-                    var p = e.AdapterDevice.Properties.Where(x => x.Name == "Speech").First()
-                       .Attributes.Where(y => y.Value.Name == "Message").First();
+                    var p = e.AdapterDevice.Properties.Where(x => x.Name == "Speech")?.First()
+                       ?.Attributes?.Where(y => y.Value.Name == "Message")?.First();
 
                     if (p != null) { Speak(p.Value.Data as string); }
                     break;
@@ -46,13 +37,6 @@ namespace HeadlessAdapterApp
             }
 
             base.Adapter_AllJoynMethod(sender, e);
-        }
-
-        private async void Speak(string message)
-        {
-            SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync(message);
-
-            mediaEngine.PlayStream(stream);
         }
     }
 }

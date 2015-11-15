@@ -29,20 +29,18 @@ namespace HeadlessAdapterApp
         }
 
 
-        protected void InitBanner()
+        protected async Task InitBanner()
         {
-            InitAdc().Wait();
+            await InitAdc();
             ShowTempPressure();
             ShowLight();
         }
 
-        private async Task<bool> InitAdc()
+        private async Task InitAdc()
         {
             adcManager.Providers.Add(new ADS1015(ADS1015.Gain.Volt33));
             var ads1015 = (await adcManager.GetControllersAsync())[0];
             light = new Ldr(ads1015.OpenChannel(2));
-
-            return true;
         }
 
         async void ShowTempPressure()
