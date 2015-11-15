@@ -1,8 +1,6 @@
 ﻿using Microsoft.Maker.Media.UniversalMediaEngine;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Collections;
 using System.Threading.Tasks;
 using Windows.Media.SpeechSynthesis;
 
@@ -11,16 +9,18 @@ namespace HeadlessAdapterApp
     class Speech : Banner
     {
         //Speech Synth
-        private MediaEngine mediaEngine = new MediaEngine();
-        SpeechSynthesizer synth = new SpeechSynthesizer();
+        private MediaEngine mediaEngine;
+        SpeechSynthesizer synth;
 
-        public  Speech()
+        public Speech()
         {
             InitSpeech().Wait();
         }
 
         public async Task InitSpeech()
         {
+            mediaEngine = new MediaEngine();
+            synth = new SpeechSynthesizer();
             await mediaEngine.InitializeAsync();
         }
 

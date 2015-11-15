@@ -12,6 +12,7 @@ namespace HeadlessAdapterApp
         public async void Initialise()
         { 
             await InitSpeech();
+
             InitAllJoyn();
 
             await InitBanner();  
@@ -24,7 +25,6 @@ namespace HeadlessAdapterApp
         {
             switch (e.Method.Name.ToLower())
             {
-
                 case "joke":
                     var p = e.AdapterDevice.Properties.Where(x => x.Name == "Speech")?.First()
                        ?.Attributes?.Where(y => y.Value.Name == "Message")?.First();

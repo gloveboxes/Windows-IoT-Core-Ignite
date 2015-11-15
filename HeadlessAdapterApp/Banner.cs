@@ -10,34 +10,38 @@ namespace HeadlessAdapterApp
     class Banner : AllJoyn
     {
 
-        LED8x8Matrix matrix = new LED8x8Matrix(new Ht16K33());
-        LED8x8Matrix strip = new LED8x8Matrix(new MAX7219(4, MAX7219.Rotate.None, MAX7219.Transform.HorizontalFlip));
+        LED8x8Matrix matrix;
+        LED8x8Matrix strip;
 
         // sensors
-        BMP180 bmp180 = new BMP180();
+        BMP180 bmp180;
+
         Ldr light = null;
 
         //ADC
-        AdcProviderManager adcManager = new AdcProviderManager();
-
-        public Banner()
-        {
-
-            matrix.SetBrightness(1);
-            strip.SetBrightness(3);
-
-        }
+        AdcProviderManager adcManager;
 
 
         protected async Task InitBanner()
         {
-            await InitAdc();
+            matrix = new LED8x8Matrix(new Ht16K33());
+            strip = new LED8x8Matrix(new MAX7219(4, MAX7219.Rotate.None, MAX7219.Transform.HorizontalFlip));
+
+            matrix.SetBrightness(1);
+            strip.SetBrightness(3);
+
+            bmp180 = new BMP180();
+
+        
+            //await InitAdc();
+            //ShowLight();
+
             ShowTempPressure();
-            ShowLight();
         }
 
         private async Task InitAdc()
         {
+            adcManager = new AdcProviderManager();
             adcManager.Providers.Add(new ADS1015(ADS1015.Gain.Volt33));
             var ads1015 = (await adcManager.GetControllersAsync())[0];
             light = new Ldr(ads1015.OpenChannel(2));
