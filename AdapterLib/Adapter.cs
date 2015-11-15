@@ -165,6 +165,7 @@ namespace AdapterLib
             myDevice.Methods.Add(new AdapterMethod("right", "Turn right", 0));
             myDevice.Methods.Add(new AdapterMethod("backward", "Backwards", 0));
             myDevice.Methods.Add(new AdapterMethod("joke", "Tell me a joke", 0));
+            myDevice.Methods.Add(new AdapterMethod("banner", "Banner Control", 0));
 
 
             AdapterProperty lightProperty = new AdapterProperty("Light", "");
@@ -176,6 +177,12 @@ namespace AdapterLib
             speechProperty.Attributes.Add(NewAttribute("Volume", 4, E_ACCESS_TYPE.ACCESS_READWRITE));
             speechProperty.Attributes.Add(NewAttribute("Message", "Tell me a joke", E_ACCESS_TYPE.ACCESS_READWRITE));
             myDevice.Properties.Add(speechProperty);
+
+            AdapterProperty bannerProperty = new AdapterProperty("Banner", "");
+            bannerProperty.Attributes.Add(NewAttribute("Pre", "Maker Den", E_ACCESS_TYPE.ACCESS_READWRITE));
+            bannerProperty.Attributes.Add(NewAttribute("Post", "Data Den", E_ACCESS_TYPE.ACCESS_READWRITE));
+            bannerProperty.Attributes.Add(NewAttribute("Calibration", 0, E_ACCESS_TYPE.ACCESS_READWRITE));
+            myDevice.Properties.Add(bannerProperty);
 
 
             devices.Add(myDevice);
