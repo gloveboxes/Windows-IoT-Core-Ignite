@@ -15,7 +15,7 @@ namespace HeadlessAdapterApp
 
             InitAllJoyn();
 
-            await InitBanner();  
+            InitBanner();  // initalised async
       
 
             adapter.AllJoynMethod += Adapter_AllJoynMethod;

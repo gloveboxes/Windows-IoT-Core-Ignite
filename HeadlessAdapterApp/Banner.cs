@@ -22,7 +22,7 @@ namespace HeadlessAdapterApp
         AdcProviderManager adcManager;
 
 
-        protected async Task InitBanner()
+        protected async void InitBanner()
         {
             matrix = new LED8x8Matrix(new Ht16K33());
             strip = new LED8x8Matrix(new MAX7219(4, MAX7219.Rotate.None, MAX7219.Transform.HorizontalFlip));
@@ -30,16 +30,16 @@ namespace HeadlessAdapterApp
             matrix.SetBrightness(1);
             strip.SetBrightness(3);
 
-            bmp180 = new BMP180();
+            bmp180 = new BMP180(); // init temp and air pressure
+            await InitLightAdc();  // init ldr on ads1015 adc
 
-        
-            //await InitAdc();
-            //ShowLight();
 
             ShowTempPressure();
+            ShowLight();
+
         }
 
-        private async Task InitAdc()
+        private async Task InitLightAdc()
         {
             adcManager = new AdcProviderManager();
             adcManager.Providers.Add(new ADS1015(ADS1015.Gain.Volt33));
