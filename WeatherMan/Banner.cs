@@ -75,10 +75,6 @@ namespace HeadlessAdapterApp
             while (true)
             {
                 lvl = light.ReadRatio * 100;
-                //if (lvl < 50)
-                //{
-                //    Speak("It's dark in here!");
-                //}
 
                 string lightMsg = string.Format("{0}p ", Math.Round(lvl, 1));
                 matrix.ScrollStringInFromRight(lightMsg, 100);
