@@ -50,11 +50,17 @@ namespace HeadlessAdapterApp
         async void ShowTempPressure()
         {
             double temperature = 0;
+            double oldTemp = 0;
 
             while (true)
             {
                 temperature = bmp180.Temperature.DegreesCelsius;
-                Speak("The temperature is " + Math.Round(temperature, 1) + " celsius");
+
+                if (Math.Round(temperature,0) != oldTemp)
+                {
+                    Speak("The temperature is now " + Math.Round(temperature, 1) + " degrees celsius");
+                    oldTemp = Math.Round(temperature,0);
+                }
 
                 string msg = string.Format("{0}, {1}C, {2}hPa, {3} ", preMessage, Math.Round(temperature, 1), Math.Round(bmp180.Pressure.Hectopascals, 0), postMessage);
                 strip.ScrollStringInFromRight(msg, 80);
@@ -69,10 +75,10 @@ namespace HeadlessAdapterApp
             while (true)
             {
                 lvl = light.ReadRatio * 100;
-                if (lvl < 50)
-                {
-                    Speak("It's dark in here!");
-                }
+                //if (lvl < 50)
+                //{
+                //    Speak("It's dark in here!");
+                //}
 
                 string lightMsg = string.Format("{0}p ", Math.Round(lvl, 1));
                 matrix.ScrollStringInFromRight(lightMsg, 100);

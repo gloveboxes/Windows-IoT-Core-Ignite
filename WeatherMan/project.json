@@ -1,12 +1,12 @@
 ﻿{
   "dependencies": {
     "Glovebox.Graphics": "1.0.8",
-    "Glovebox.IoT.Devices": "1.0.5",
-    "Microsoft.ApplicationInsights": "1.0.0",
-    "Microsoft.ApplicationInsights.PersistenceChannel": "1.0.0",
-    "Microsoft.ApplicationInsights.WindowsApps": "1.0.0",
+    "Glovebox.IoT.Devices": "1.0.14",
+    "Microsoft.ApplicationInsights": "1.2.3",
+    "Microsoft.ApplicationInsights.PersistenceChannel": "1.2.3",
+    "Microsoft.ApplicationInsights.WindowsApps": "1.1.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
-    "UnitsNet": "3.19.1"
+    "UnitsNet": "3.20.0"
   },
   "frameworks": {
     "uap10.0": {}

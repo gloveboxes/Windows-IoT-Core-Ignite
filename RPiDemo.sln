@@ -11,7 +11,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BridgeRT", "BridgeRT\Bridge
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "Common\Common.vcxproj", "{4D445253-3BBA-455D-B324-ECE00D4FE480}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeadlessAdapterApp", "HeadlessAdapterApp\HeadlessAdapterApp.csproj", "{4C87DC5C-B33B-47D5-B199-EFC20547AA66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherMan", "WeatherMan\WeatherMan.csproj", "{4C87DC5C-B33B-47D5-B199-EFC20547AA66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

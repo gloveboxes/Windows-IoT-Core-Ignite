@@ -3,23 +3,7 @@
   "version": 1,
   "targets": {
     "UAP,Version=v10.0": {
-      "Glovebox.Graphics/1.0.8": {
-        "compile": {
-          "lib/uap10.0/Glovebox.Graphics.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Glovebox.Graphics.dll": {}
-        }
-      },
-      "Glovebox.IoT.Devices/1.0.5": {
-        "compile": {
-          "lib/uap10.0/Glovebox.IoT.Devices.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Glovebox.IoT.Devices.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -27,9 +11,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.3, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -38,10 +22,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -1582,34 +1566,10 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "UnitsNet/3.19.1": {
-        "compile": {
-          "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll": {}
-        }
       }
     },
     "UAP,Version=v10.0/win10-arm": {
-      "Glovebox.Graphics/1.0.8": {
-        "compile": {
-          "lib/uap10.0/Glovebox.Graphics.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Glovebox.Graphics.dll": {}
-        }
-      },
-      "Glovebox.IoT.Devices/1.0.5": {
-        "compile": {
-          "lib/uap10.0/Glovebox.IoT.Devices.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Glovebox.IoT.Devices.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -1617,9 +1577,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.3, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -1628,10 +1588,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -3262,34 +3222,10 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "UnitsNet/3.19.1": {
-        "compile": {
-          "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll": {}
-        }
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
-      "Glovebox.Graphics/1.0.8": {
-        "compile": {
-          "lib/uap10.0/Glovebox.Graphics.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Glovebox.Graphics.dll": {}
-        }
-      },
-      "Glovebox.IoT.Devices/1.0.5": {
-        "compile": {
-          "lib/uap10.0/Glovebox.IoT.Devices.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Glovebox.IoT.Devices.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -3297,9 +3233,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.3, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -3308,10 +3244,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -4914,34 +4850,10 @@
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "UnitsNet/3.19.1": {
-        "compile": {
-          "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll": {}
-        }
       }
     },
     "UAP,Version=v10.0/win10-x64": {
-      "Glovebox.Graphics/1.0.8": {
-        "compile": {
-          "lib/uap10.0/Glovebox.Graphics.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Glovebox.Graphics.dll": {}
-        }
-      },
-      "Glovebox.IoT.Devices/1.0.5": {
-        "compile": {
-          "lib/uap10.0/Glovebox.IoT.Devices.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Glovebox.IoT.Devices.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -4949,9 +4861,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.3, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -4960,10 +4872,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -6599,34 +6511,10 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "UnitsNet/3.19.1": {
-        "compile": {
-          "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll": {}
-        }
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
-      "Glovebox.Graphics/1.0.8": {
-        "compile": {
-          "lib/uap10.0/Glovebox.Graphics.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Glovebox.Graphics.dll": {}
-        }
-      },
-      "Glovebox.IoT.Devices/1.0.5": {
-        "compile": {
-          "lib/uap10.0/Glovebox.IoT.Devices.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Glovebox.IoT.Devices.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -6634,9 +6522,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.3, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -6645,10 +6533,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -8251,34 +8139,10 @@
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "UnitsNet/3.19.1": {
-        "compile": {
-          "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll": {}
-        }
       }
     },
     "UAP,Version=v10.0/win10-x86": {
-      "Glovebox.Graphics/1.0.8": {
-        "compile": {
-          "lib/uap10.0/Glovebox.Graphics.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Glovebox.Graphics.dll": {}
-        }
-      },
-      "Glovebox.IoT.Devices/1.0.5": {
-        "compile": {
-          "lib/uap10.0/Glovebox.IoT.Devices.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Glovebox.IoT.Devices.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -8286,9 +8150,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.3, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -8297,10 +8161,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -9936,34 +9800,10 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "UnitsNet/3.19.1": {
-        "compile": {
-          "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll": {}
-        }
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
-      "Glovebox.Graphics/1.0.8": {
-        "compile": {
-          "lib/uap10.0/Glovebox.Graphics.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Glovebox.Graphics.dll": {}
-        }
-      },
-      "Glovebox.IoT.Devices/1.0.5": {
-        "compile": {
-          "lib/uap10.0/Glovebox.IoT.Devices.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Glovebox.IoT.Devices.dll": {}
-        }
-      },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -9971,9 +9811,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.3, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -9982,10 +9822,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -11588,44 +11428,12 @@
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "UnitsNet/3.19.1": {
-        "compile": {
-          "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "Glovebox.Graphics/1.0.8": {
-      "sha512": "9y7ryP1aJDkHlRtIfcQg7c5wXk5wjN1p9xGql5V+Cx67RwDN2ltapsbvIxh3xv0l5bn8TJg2WiIEC8nocdp8cA==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "CreateNugetPackage.bat",
-        "Glovebox.Graphics.nuspec",
-        "lib/uap10.0/Glovebox.Graphics.dll",
-        "package/services/metadata/core-properties/8665105d22cb4a1e9fa048f4c6775650.psmdcp"
-      ]
-    },
-    "Glovebox.IoT.Devices/1.0.5": {
-      "sha512": "gB8yPqt83VdPFOjuoAkS/30wy3iIScIG4zaNFOTNEbXxkPPDemurTsIJtJZvQgeZhx60Lk/dBiX31f/dPNUrUA==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "CreateNugetPackage.bat",
-        "Glovebox.IoT.Devices.nuspec",
-        "lib/uap10.0/Glovebox.IoT.Devices.dll",
-        "package/services/metadata/core-properties/aea2dc4e844847d789fdf8f33bae7142.psmdcp"
-      ]
-    },
-    "Microsoft.ApplicationInsights/1.0.0": {
-      "sha512": "HZ47/thX57SOuIivSvIbsR6L9CCb/Yt3IyB2i4KHmmNlf3DO+lqFwWIKDdbDNWKX+qh0Rg20/JSMPK0dwUsYYw==",
+    "Microsoft.ApplicationInsights/1.2.3": {
+      "sha512": "a34atobxpucCTTX9VCD7aIu6Ydzry+Va7TxK2tTQcfaMvefGW4kUKtg9GHKIn19IaXe+A4oZt/GBqsOt5vQrBA==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -11639,27 +11447,29 @@
         "lib/wp8/Microsoft.ApplicationInsights.dll",
         "lib/wp8/Microsoft.ApplicationInsights.XML",
         "Microsoft.ApplicationInsights.nuspec",
-        "package/services/metadata/core-properties/b9e7bc7ab2454491af07046165ff01d0.psmdcp"
+        "package/services/metadata/core-properties/3b36eef276524f5d883c618d5fd8c500.psmdcp"
       ]
     },
-    "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
-      "sha512": "0qQXC+CtbyF2RPuld5pF74fxsnP6ml0LUnzQ6GL9AXXY64LPsLDsPUAymoUffo7LZvPDppZboTYX59TfVxKA7A==",
+    "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
+      "sha512": "5MGcvPQVaGlGyAVh9adg4sSkIVSYDKn+H3+YnZa9hi1gH/g6UsRt4HLc8vp/IxjlbmXbJyAB7dYJV/NHmAGAgA==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
         "_rels/.rels",
         "lib/net40/Microsoft.ApplicationInsights.PersistenceChannel.dll",
         "lib/net40/Microsoft.ApplicationInsights.PersistenceChannel.XML",
-        "lib/portable-win8+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.XML",
+        "lib/net45/Microsoft.ApplicationInsights.PersistenceChannel.dll",
+        "lib/net45/Microsoft.ApplicationInsights.PersistenceChannel.XML",
         "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll",
+        "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.XML",
         "lib/wp8/Microsoft.ApplicationInsights.PersistenceChannel.dll",
         "lib/wp8/Microsoft.ApplicationInsights.PersistenceChannel.XML",
         "Microsoft.ApplicationInsights.PersistenceChannel.nuspec",
-        "package/services/metadata/core-properties/dc9ebba80e7343fdbd0a39a3cdeb672c.psmdcp"
+        "package/services/metadata/core-properties/f973733421c14c3594986b3f2c22213a.psmdcp"
       ]
     },
-    "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
-      "sha512": "NvBQnFeiFd0O1QdBz06UGApD7zn7ztVi7qO18IsM3EjiXRNgfrEBXB+azNm8XqLY8xGFAqh3HAuSd/wHZMe0XA==",
+    "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
+      "sha512": "H6nhyM+ZVOhLmF8cqQj70fc5HZOS6dxh18nNwEM7+HD8NzArdSLK0gwGJkEOUYPtjner/0/3aOxgGZbFi9OVdA==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -11671,7 +11481,7 @@
         "lib/wpa81/Microsoft.ApplicationInsights.Extensibility.Windows.dll",
         "lib/wpa81/Microsoft.ApplicationInsights.Extensibility.Windows.XML",
         "Microsoft.ApplicationInsights.WindowsApps.nuspec",
-        "package/services/metadata/core-properties/4f6f732debe548beaa1183418e8d65cc.psmdcp"
+        "package/services/metadata/core-properties/441e5d0bc7164e089277ae041b2043cc.psmdcp"
       ]
     },
     "Microsoft.CSharp/4.0.0": {
@@ -15021,31 +14831,14 @@
         "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll",
         "System.Xml.XmlSerializer.nuspec"
       ]
-    },
-    "UnitsNet/3.19.1": {
-      "sha512": "A5W8V2Ayrxv5N4CuVPVN09C7RxQvBWDJsNIP2ljgJii2sm8sbhbTWZMCJEv4ghddBXT2d5K1h3oICWbsrj/cIQ==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "lib/net35/UnitsNet.dll",
-        "lib/net451/UnitsNet.dll",
-        "lib/portable-net40+sl5+win+wp80+wpa81/UnitsNet.dll",
-        "lib/portable-net45+win+wp80+wpa81/UnitsNet.dll",
-        "package/services/metadata/core-properties/9e15ef5a9af44147b1afa49ed01c4b76.psmdcp",
-        "UnitsNet.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
     "": [
-      "Glovebox.Graphics >= 1.0.8",
-      "Glovebox.IoT.Devices >= 1.0.5",
-      "Microsoft.ApplicationInsights >= 1.0.0",
-      "Microsoft.ApplicationInsights.PersistenceChannel >= 1.0.0",
-      "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",
-      "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
-      "UnitsNet >= 3.19.1"
+      "Microsoft.ApplicationInsights >= 1.2.3",
+      "Microsoft.ApplicationInsights.PersistenceChannel >= 1.2.3",
+      "Microsoft.ApplicationInsights.WindowsApps >= 1.1.0",
+      "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0"
     ],
     "UAP,Version=v10.0": []
   }
