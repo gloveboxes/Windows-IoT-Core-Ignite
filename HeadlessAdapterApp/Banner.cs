@@ -49,9 +49,14 @@ namespace HeadlessAdapterApp
 
         async void ShowTempPressure()
         {
+            double temperature = 0;
+
             while (true)
             {
-                string msg = string.Format("{0}, {1}C, {2}hPa, {3} ", preMessage, Math.Round(bmp180.Temperature.DegreesCelsius, 1), Math.Round(bmp180.Pressure.Hectopascals, 0), postMessage);
+                temperature = bmp180.Temperature.DegreesCelsius;
+                Speak("The temperature is " + Math.Round(temperature, 1) + " celsius");
+
+                string msg = string.Format("{0}, {1}C, {2}hPa, {3} ", preMessage, Math.Round(temperature, 1), Math.Round(bmp180.Pressure.Hectopascals, 0), postMessage);
                 strip.ScrollStringInFromRight(msg, 80);
                 await Task.Delay(10);
             }
