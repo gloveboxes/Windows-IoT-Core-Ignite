@@ -51,7 +51,6 @@ private:
 	LONG m_cRef;
 	bool isInitialized;
 	ComPtr<IMFMediaEngine> spMediaEngine;
-	//ComPtr<MediaEngineNotify> spMediaEngineNotify;
 	Microsoft::Maker::Media::UniversalMediaEngine::MediaEngine^ mediaEngineComponent;
 
 	HRESULT checkInitialized();
