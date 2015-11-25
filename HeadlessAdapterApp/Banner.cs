@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HeadlessAdapterApp
 {
-    class Banner : AllJoyn
+    class Banner : Speech
     {
 
         LED8x8Matrix matrix;
@@ -28,21 +28,21 @@ namespace HeadlessAdapterApp
             strip = new LED8x8Matrix(new MAX7219(4, MAX7219.Rotate.None, MAX7219.Transform.HorizontalFlip));
 
             matrix.SetBrightness(1);
-            strip.SetBrightness(3);
+            strip.SetBrightness(1);
 
             bmp180 = new BMP180(); // init temp and air pressure
             await InitLightAdc();  // init ldr on ads1015 adc
 
 
             ShowTempPressure();
-            ShowLight();
+            ShowLightLevel();
 
         }
 
         private async Task InitLightAdc()
         {
             adcManager = new AdcProviderManager();
-            adcManager.Providers.Add(new ADS1015(ADS1015.Gain.Volt33));
+            adcManager.Providers.Add(new ADS1015(ADS1015.Gain.Volt5));
             var ads1015 = (await adcManager.GetControllersAsync())[0];
             light = new Ldr(ads1015.OpenChannel(2));
         }
@@ -57,12 +57,19 @@ namespace HeadlessAdapterApp
             }
         }
 
-        async void ShowLight()
+        async void ShowLightLevel()
         {
+            double lvl = 0;
 
             while (true)
             {
-                string lightMsg = string.Format("{0}p ", Math.Round((1 - light.ReadRatio) * 100, 1));
+                lvl = light.ReadRatio * 100;
+                if (lvl < 50)
+                {
+                    Speak("It's dark in here!");
+                }
+
+                string lightMsg = string.Format("{0}p ", Math.Round(lvl, 1));
                 matrix.ScrollStringInFromRight(lightMsg, 100);
                 await Task.Delay(10);
             }

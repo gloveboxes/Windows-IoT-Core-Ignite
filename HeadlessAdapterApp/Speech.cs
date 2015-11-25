@@ -6,11 +6,12 @@ using Windows.Media.SpeechSynthesis;
 
 namespace HeadlessAdapterApp
 {
-    class Speech : Banner
+    class Speech : AllJoyn
     {
         //Speech Synth
         private MediaEngine mediaEngine;
         SpeechSynthesizer synth;
+        bool speaking = false;
 
         public Speech()
         {
@@ -26,8 +27,12 @@ namespace HeadlessAdapterApp
 
         protected async void Speak(string message)
         {
+            if (speaking) { return; }
+            speaking = true;
             SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync(message);
             mediaEngine.PlayStream(stream);
+            await Task.Delay(1500);
+            speaking = false;
         }
     }
 }

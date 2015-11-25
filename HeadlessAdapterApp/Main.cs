@@ -7,7 +7,7 @@ using Windows.Media.SpeechSynthesis;
 
 namespace HeadlessAdapterApp
 {
-    class Main : Speech
+    class Main : Banner
     {
         public async void Initialise()
         { 
