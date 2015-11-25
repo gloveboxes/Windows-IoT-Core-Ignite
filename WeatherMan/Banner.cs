@@ -50,16 +50,16 @@ namespace HeadlessAdapterApp
         async void ShowTempPressure()
         {
             double temperature = 0;
-            double oldTemp = 0;
+            int oldTemp = 0;
 
             while (true)
             {
                 temperature = bmp180.Temperature.DegreesCelsius;
 
-                if (Math.Round(temperature,0) != oldTemp)
+                if (Convert.ToInt32(Math.Round(temperature,0)) != oldTemp)
                 {
                     Speak("The temperature is now " + Math.Round(temperature, 1) + " degrees celsius");
-                    oldTemp = Math.Round(temperature,0);
+                    oldTemp = Convert.ToInt32(Math.Round(temperature,0));
                 }
 
                 string msg = string.Format("{0}, {1}C, {2}hPa, {3} ", preMessage, Math.Round(temperature, 1), Math.Round(bmp180.Pressure.Hectopascals, 0), postMessage);
